@@ -1,6 +1,6 @@
 # CategoriesController
 class NotesController < ApplicationController
-  before_action :find_note, only: %i[edit update]
+  before_action :find_note, only: %i[edit update show destroy]
   def index
     @notes = Note.all.order('created_at DESC')
   end
@@ -26,6 +26,13 @@ class NotesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show; end
+
+  def destroy
+    @note.destroy
+    redirect_to root_path
   end
 
   private
