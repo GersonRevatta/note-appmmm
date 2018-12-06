@@ -1,0 +1,7 @@
+.content-comment
+  %small.lead= comment.content
+  %p
+    %small
+      Submitted
+      %strong
+        = time_ago_in_words(comment.created_at)
