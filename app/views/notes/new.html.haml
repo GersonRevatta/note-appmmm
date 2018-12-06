@@ -1,0 +1,10 @@
+= form_for @note do |f|
+  .content-form
+    = f.label :title
+    .input-group-lg
+      = f.text_field :title, class: "form-control", placeholder: 'Titulo'
+    = f.label :Description
+    .input-group-lg
+      = f.text_area :description, class: "form-control", placeholder: 'Content...',rows: 5
+    %p
+      = f.submit
