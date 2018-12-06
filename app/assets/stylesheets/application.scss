@@ -1,7 +1,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+// form
 .content-form {
   margin-left: auto;
   margin-right: auto;
   padding: 3em 2em;
+}
+// index on note
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  widht: 100%;
+}
+h3 { text-align: center; }
+.notes,.note-content,.note-description {
+  padding: .5em 3em;
+}
+.note {
+  border-style: solid;
+  border-radius: 8px;
+  padding: 1em .5em;
+  margin: 1em 0px;
 }

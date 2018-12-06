@@ -1,8 +1,15 @@
-%h2 Notes
+%h3.title Links
 = link_to 'New Note', new_note_path
-- @notes.each do |note|
-  %p= link_to note.title, note_path(note)
-  %p= link_to 'Edit', edit_note_path(note)
-  %p= link_to 'Destroy', note_path(note), method: :delete
-
-  %hr
+.row.notes
+  .col-md-7
+    - @notes.each do |note|
+      .note
+        .row
+          .col-md-12
+            %h2
+              = link_to note.title, note
+            %p= truncate(note.description, length: 100)
+            %small.row
+              .col-md-10
+                %i.fas.fa-user-circle
+                Created at #{note.created_at.strftime("%B %d, %Y")}
