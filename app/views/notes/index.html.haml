@@ -1,0 +1,15 @@
+%h3.title Links
+= link_to 'New Note', new_note_path
+.row.notes
+  .col-md-7
+    - @notes.each do |note|
+      .note
+        .row
+          .col-md-12
+            %h2
+              = link_to note.title, note
+            %p= truncate(note.description, length: 100)
+            %small.row
+              .col-md-10
+                %i.fas.fa-user-circle
+                Created at #{note.created_at.strftime("%B %d, %Y")}

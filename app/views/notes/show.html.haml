@@ -1,0 +1,11 @@
+.note-content
+  %h2= @note.title
+  %small
+    Submitted #{time_ago_in_words(@note.created_at)}
+  %br/
+  .btn-group
+  = link_to 'Edit', edit_note_path(@note), class: 'btn btn-danger'
+  = link_to 'Delete', note_path(@note), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+  %h5 Description
+  .note-description
+    = @note.description

@@ -1,0 +1,13 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/PredicateName:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/*'
+    - 'vendor/**/*'
+    - 'spec/**/*'
+LineLength:
+  Max: 160
