@@ -1,4 +1,6 @@
 %h2 Notes
 = link_to 'New Note', new_note_path
 - @notes.each do |note|
-  %p= note.title
+  %p note.title
+  %p= link_to 'Edit', edit_note_path(note)
+  %hr
