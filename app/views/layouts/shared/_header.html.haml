@@ -1,0 +1,16 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .container.nav-men
+    .navbar-header
+      %button.navbar-toggle.men-b{"data-target" => "#navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "Logo", root_path, class: "logoPortada"
+    #navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to root_path do
+            .icon
+              %i.fas.fa-home
+              %span Inicio
