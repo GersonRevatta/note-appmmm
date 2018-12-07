@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
   def find_comment
     @comment = @note.comments.find(params[:id])
   end
+
   def find_note
     @note = Note.find(params[:note_id])
   end

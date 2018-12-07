@@ -1,4 +1,4 @@
-# CategoriesController
+# NotesController
 class NotesController < ApplicationController
   before_action :find_note, only: %i[edit update show destroy]
   def index
