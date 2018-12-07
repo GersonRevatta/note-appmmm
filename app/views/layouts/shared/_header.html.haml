@@ -1,43 +1,16 @@
-%nav.navbar.navbar-inverse.navbar-fixed-top
-  .container
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .container.nav-men
     .navbar-header
-      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+      %button.navbar-toggle.men-b{"data-target" => "#navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"} Logo
-    #navbar.navbar-collapse.collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"} Home
-        %li
-          %a{:href => "#about"} About
-        %li
-          %a{:href => "#contact"} Contact
-        %li.dropdown
-          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Dropdown
-            %span.caret
-          %ul.dropdown-menu
-            %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
-            %li.divider{:role => "separator"}
-            %li.dropdown-header Nav header
-            %li
-              %a{:href => "#"} Separated link
-            %li
-              %a{:href => "#"} One more separated link
+      = link_to "Logo", root_path, class: "logoPortada"
+    #navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "../navbar/"} Default
-        %li
-          %a{:href => "../navbar-static-top/"} Static top
-        %li.active
-          %a{:href => "./"}
-            Fixed top
-            %span.sr-only (current)
+          = link_to root_path do
+            .icon
+              %i.fas.fa-home
+              %span Inicio
