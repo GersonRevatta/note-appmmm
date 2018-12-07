@@ -29,7 +29,7 @@ h3 { text-align: center; }
 }
 /* comment */
 .content-comment {
-  padding: .5em 1em;
+  padding: .5em .5em;
   width: 100%;
   border-style: ridge;
   border-radius: 8px;
@@ -45,4 +45,8 @@ h3 { text-align: center; }
   padding: 2em;
   overflow-y: auto;
   height: 40vh;
+}
+.btn-destroy-comment {
+  font-size: 1.5em;
+  color: red;
 }

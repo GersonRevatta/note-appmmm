@@ -1,7 +1,10 @@
-.content-comment
-  %small.lead= comment.content
-  %p
-    %small
-      Submitted
-      %strong
-        = time_ago_in_words(comment.created_at)
+.content-comment.row
+  .col-xs-10
+    %small.lead= comment.content
+    %p
+      %small
+        Submitted
+        %strong
+          = time_ago_in_words(comment.created_at)
+  .col-xs-1.algo
+    = link_to '×', ([@note,comment]), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy-comment"
