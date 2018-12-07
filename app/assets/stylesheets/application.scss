@@ -22,3 +22,31 @@ h3 { text-align: center; }
   padding: 1em .5em;
   margin: 1em 0px;
 }
+/* comment-form */
+.form-comment {
+  width: 50%;
+  margin: 1em .5em;
+}
+/* comment */
+.content-comment {
+  padding: .5em .5em;
+  width: 100%;
+  border-style: ridge;
+  border-radius: 8px;
+  margin: 1em .5em;
+  height: 6em;
+  overflow-y: auto;
+  p small {
+    color: blue;
+    font-size: 1em;
+  }
+}
+.container-comments {
+  padding: 2em;
+  overflow-y: auto;
+  height: 40vh;
+}
+.btn-destroy-comment {
+  font-size: 1.5em;
+  color: red;
+}

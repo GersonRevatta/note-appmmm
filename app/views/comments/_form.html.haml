@@ -1,0 +1,7 @@
+.form-comment
+  = form_for ([@note, Comment.new]) do |f|
+    .input-group-lg
+      = f.text_area :content, rows: 3, placeholder: 'Comment...', class: "form-control"
+    %p
+      %button.btn.btn-lg.btn-primary#submit_comment{:type => "submit"}
+        Enviar
