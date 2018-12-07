@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :notes do
     resources :comments
   end
-  root 'notes#index'
+  root 'pages#index'
 end
